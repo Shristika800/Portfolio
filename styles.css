@@ -1,0 +1,271 @@
+/* styles.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background: transparent;
+  line-height: 1.8;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgba(0, 0, 0, 0.6); */
+  z-index: -1;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px 60px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 8px black;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-top: 10px;
+  text-align: center;
+}
+
+section {
+  max-width: 2000px;
+  margin: 0 auto 40px;
+  padding: 60px 40px;
+ 
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  text-align: center;
+}
+
+.skills {
+  padding-top: 20px;
+}
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  margin: 30px 0;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  font-size: 0.85rem;
+  color: #eee;
+}
+
+.skill-item img {
+  height: 28px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.skill-item img:hover {
+  transform: scale(1.2);
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding-top: 20px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.1);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255,255,255,0.3);
+}
+
+.resume a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: lightblue;
+  text-decoration: none;
+  border: 2px solid lightblue;
+  padding: 10px 25px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.resume a:hover {
+  background: lightblue;
+  color: black;
+  transform: scale(1.05);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+  justify-content: center;
+}
+
+.contact-grid > div {
+  padding-right: 40px;
+  padding-top: 10px;
+}
+
+.contact-grid > * {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: none;
+  border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #ccc;
+}
+
+form button {
+  padding: 12px 24px;
+  background: lightblue;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+footer p {
+  margin-bottom: 5px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 40px 4vw;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid > div {
+    padding-right: 0;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .skill-item {
+    width: 60px;
+    font-size: 0.75rem;
+  }
+
+  .skill-item img {
+    height: 24px;
+  }
+
+  .resume a {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+}
+
+/* Scroll animation trigger */
+.reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Hide initially */
+section, .hero {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
