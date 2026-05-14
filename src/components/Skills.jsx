@@ -1,4 +1,4 @@
-import './Skills.css'
+import './css files/skills.css'
 
 const skillCategories = [
   {

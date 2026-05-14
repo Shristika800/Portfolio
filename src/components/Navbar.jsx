@@ -1,4 +1,4 @@
-import './Navbar.css'
+import './css files/navbar.css'
 
 const links = ['About', 'Skills', 'Projects', 'Contact']
 

@@ -1,4 +1,4 @@
-import './About.css'
+import './css files/about.css'
 
 const certs = [
   { icon: '☁️', name: 'AWS Certified Data Analytics – Specialty', org: 'Amazon Web Services' },

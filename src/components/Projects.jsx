@@ -1,4 +1,4 @@
-import './Projects.css'
+import './css files/projects.css'
 
 const GithubIcon = () => (
   <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">

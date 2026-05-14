@@ -1,4 +1,4 @@
-import './Hero.css'
+import './css files/hero.css'
 
 const stats = [
   { num: '89', suffix: '%', label: 'Churn Model Accuracy' },
