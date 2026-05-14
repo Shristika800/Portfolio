@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shristika800.github.io/Portfolio/sitemap.xml
