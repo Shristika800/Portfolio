@@ -1,0 +1,85 @@
+.about-section {
+  position: relative;
+  z-index: 1;
+  padding: 100px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.about-text p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+}
+.about-text p strong { color: var(--text); }
+.about-certs { margin-top: 32px; display: flex; flex-direction: column; gap: 12px; }
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+.cert-badge:hover { border-color: var(--accent); }
+.cert-icon {
+  font-size: 1.4rem;
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface2);
+  border-radius: 8px;
+}
+.cert-name { font-size: 0.85rem; font-weight: 700; color: var(--text); }
+.cert-org {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.about-timeline { display: flex; flex-direction: column; }
+.timeline-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.timeline-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 39px; top: 30px;
+  width: 1px; bottom: 0;
+  background: var(--border);
+}
+.timeline-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--accent);
+  padding-top: 4px;
+  text-align: right;
+}
+.timeline-dot {
+  position: absolute;
+  left: 35px; top: 4px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+}
+.timeline-role { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.timeline-org { font-size: 0.85rem; color: var(--accent); margin-bottom: 6px; }
+.timeline-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+@media (max-width: 900px) {
+  .about-section { padding: 80px 24px; }
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+}
